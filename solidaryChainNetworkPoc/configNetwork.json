@@ -1,0 +1,13 @@
+{
+  "connectionProfileFile": "connectionProfileNetwork.json",
+  "chaincodeName" : "solidary-network-chaincode",
+  "walletPath":"./walletNetwork",
+  "channel" : "channelall",
+  "peerIdentity": "admin",
+  "appAdmin": "admin",
+  "appAdminSecret": "adminpw",
+  "orgMSPID": "Org1MSP",
+  "caName": "ca.org1.example.com",
+  "userName": "V1",
+  "gatewayDiscovery": { "enabled": true, "asLocalhost": false }
+}
