@@ -9,7 +9,7 @@ const fs = require('fs');
 // const CHAINCODE_NAME = 'auction';
 const CHAINCODE_NAME = 'solidary-network-chaincode';
 // from ibm network, dont change it
-const CHANNEL = 'allchannel';
+const CHANNEL = 'channelall';
 
 //connect to the config file
 const configPath = path.join(process.cwd(), './configLocal.json');
@@ -67,25 +67,15 @@ async function contractEvents() {
       //where we output the TradeEvent
       console.log('************************ Start Trade Event *******************************************************');
       console.log(`Block Number: ${blockNumber} Transaction ID: ${transactionId} Status: ${status}`);
-      if (CHAINCODE_NAME === 'solidary-network-chaincode') {
-        console.log(JSON.stringify(event, undefined, 2));
-      } else {
-        console.log(`type: ${event.type}`);
-        console.log(`ownerId: ${event.ownerId}`);
-        console.log(`id: ${event.id}`);
-        console.log(`description: ${event.description}`);
-        console.log(`status: ${event.status}`);
-        console.log(`amount: ${event.amount}`);
-        console.log(`buyerId: ${event.buyerId}`);
-        console.log('************************ End Trade Event ************************************');
-      }
+      console.log(JSON.stringify(event, undefined, 2));
     });
 
-    const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
+    // use on first time only to create gov
+    // const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
     for (let i = 0; i < 280; i++) {
       const id = makeid(5);
       // console.log(`participant_createWithParameters: ${id}`);
-      const res = await contract.submitTransaction('participant_createWithParameters', `4ea88521-031b-4279-9165-9c10e18${id}`, `cod${id}`, `Participant ${id}`);
+      const res = await contract.submitTransaction('participant_createWithParameters', `4ea88521-031b-4279-9165-9c10e18${id}`, `${id}`, `Participant ${id}`);
     }
 
     // Disconnect from the gateway.

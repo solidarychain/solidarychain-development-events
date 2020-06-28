@@ -1,0 +1,80 @@
+{
+  "name": "solidary-chain",
+  "version": "1.0.0",
+  "client": {
+    "connection": {
+      "timeout": {
+        "orderer": "300",
+        "peer": {
+          "endorser": "300"
+        }
+      }
+    },
+    "organization": "Org1MSP"
+  },
+  "channels": {
+    "channelall": {
+      "orderers": [
+        "orderer1.example.com"
+      ],
+      "peer0.org1.example.com": {
+        "endorsingPeer": true,
+        "chaincodeQuery": true,
+        "ledgerQuery": true,
+        "eventSource": true
+      }
+    }
+  },
+  "organizations": {
+    "Org1MSP": {
+      "mspid": "Org1MSP",
+      "peers": [
+        "peer0.org1.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org1.example.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/f46b603d335381823acefe3b46df9a541b26b7695af4e3ea305712119402ddef_sk"
+      },
+      "signedCert": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+      }
+    }
+  },
+  "orderers": {
+    "orderer1.example.com": {
+      "url": "grpcs://orderer1.example.com:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer1.example.com",
+        "grpc-max-send-message-length": -1
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+      }
+    }
+  },
+  "peers": {
+    "peer0.org1.example.com": {
+      "url": "grpcs://peer0.org1.example.com:7051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.org1.example.com"
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
+      }
+    }
+  },
+  "certificateAuthorities": {
+    "ca.org1.example.com": {
+      "caName": "ca.org1.example.com",
+      "url": "https://ca.org1.example.com:7054",
+      "httpOptions": {
+        "verify": false
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
+      }
+    }
+  }
+}

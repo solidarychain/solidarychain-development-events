@@ -42,7 +42,7 @@ hyperledger/fabric-couchdb     latest              03ac1654afc5        3 months 
 # start byfn
 $ cd /home/mario/Development/HyperLedger/fabric-samples/first-network
 $ ./byfn.sh down
-$ ./byfn.sh up -c allchannel -s couchdb -o etcdraft -a
+$ ./byfn.sh up -c channelall -s couchdb -o etcdraft -a
 ========= All GOOD, BYFN execution completed =========== 
 
 # list containers
@@ -72,7 +72,7 @@ couchdb2                              4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp
 ## Install SolidaryChain chainCode
 
 ```shell
-$ CHANNEL="allchannel"
+$ CHANNEL="channelall"
 $ CHAINCODE_NAME="sncc"
 $ CHAINCODE_CONVECTOR=s"olidary-network-chaincode"
 $ CHAINCODE="${CHAINCODE_NAME}@1.0.cds"

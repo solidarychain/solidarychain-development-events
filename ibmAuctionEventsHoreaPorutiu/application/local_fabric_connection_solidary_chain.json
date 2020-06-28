@@ -1,17 +1,6 @@
 {
+  "name": "solidary-chain",
   "version": "1.0.0",
-  "certificateAuthorities": {
-    "ca.org1.example.com": {
-      "caName": "ca.org1.example.com",
-      "url": "https://ca.org1.example.com:7054",
-      "httpOptions": {
-        "verify": false
-      },
-      "tlsCACerts": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
-      }
-    }
-  },
   "client": {
     "connection": {
       "timeout": {
@@ -23,33 +12,69 @@
     },
     "organization": "Org1MSP"
   },
-  "name": "Org1",
+  "channels": {
+    "channelall": {
+      "orderers": [
+        "orderer1.example.com"
+      ],
+      "peer0.org1.example.com": {
+        "endorsingPeer": true,
+        "chaincodeQuery": true,
+        "ledgerQuery": true,
+        "eventSource": true
+      }
+    }
+  },
   "organizations": {
     "Org1MSP": {
-      "certificateAuthorities": [
-        "ca.org1.example.com"
-      ],
       "mspid": "Org1MSP",
       "peers": [
         "peer0.org1.example.com"
       ],
+      "certificateAuthorities": [
+        "ca.org1.example.com"
+      ],
       "adminPrivateKey": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/a7e5c7b09b66725abbe58acdb51492420df4cdb9bbd4d2f913e506251b92500a_sk"
+        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/f46b603d335381823acefe3b46df9a541b26b7695af4e3ea305712119402ddef_sk"
       },
       "signedCert": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+      }
+    }
+  },
+  "orderers": {
+    "orderer1.example.com": {
+      "url": "grpcs://localhost:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer1.example.com",
+        "grpc-max-send-message-length": -1
+      },
+      "tlsCACerts": {
+        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
       }
     }
   },
   "peers": {
     "peer0.org1.example.com": {
-      "url": "grpcs://peer0.org1.example.com:7051",
-      "eventUrl": "grpcs://peer0.org1.example.com:7052",
+      "url": "grpcs://localhost:7051",
       "grpcOptions": {
-        "ssl-target-name-override": "peer0.org1.example.com"
+        "ssl-target-name-override": "peer0.org1.example.com",
+        "grpc-max-send-message-length": -1
       },
       "tlsCACerts": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
+        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
+      }
+    }
+  },
+  "certificateAuthorities": {
+    "ca.org1.example.com": {
+      "caName": "ca.org1.example.com",
+      "url": "https://localhost:7054",
+      "httpOptions": {
+        "verify": false
+      },
+      "tlsCACerts": {
+        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
       }
     }
   }

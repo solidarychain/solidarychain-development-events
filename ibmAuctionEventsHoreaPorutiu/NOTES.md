@@ -91,8 +91,14 @@ create a sym link to source folder
 # copy
 cd /home/mario/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application
 rm local_fabric_wallet_solidary_chain/admin/*
+rm local_fabric_wallet_solidary_chain/user1/*
 cp ../../../solidarynetwork-development-monorepo/network/generated/wallets/.hfc-org1/* local_fabric_wallet_solidary_chain/admin/
 ls local_fabric_wallet_solidary_chain/admin/
+
+WIP: copyed from 61 with mc to local_fabric_wallet_solidary_chain/user1/
+
+cp ../../../solidarynetwork-development-monorepo/network/wallet/user1/ local_fabric_wallet_solidary_chain/user1/
+ls local_fabric_wallet_solidary_chain/user1/
 # don\'t forget to update `adminPrivateKey` with new `_sk` file
 ls /home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/
 ```

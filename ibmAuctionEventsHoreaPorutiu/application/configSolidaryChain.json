@@ -1,0 +1,17 @@
+{
+  "channelName": "channelall",
+  "smartContractName": "solidary-network-chaincode",
+  "walletPath": "./local_fabric_wallet_solidary_chain",
+  "connectionFile": "connection_solidary_chain.json",
+  "appAdmin": "admin",
+  "appAdminSecret": "adminpw",
+  "orgMSPID": "Org1MSP",
+  "caName": "ca.org1.example.com:7054",
+  "peer": "peer0.org1.example.com:7051",
+  "orderer": "orderer1.example.com:7050",
+  "peerIdentity": "user1",
+  "gatewayDiscovery": {
+    "enabled": true,
+    "asLocalhost": false
+  }
+}

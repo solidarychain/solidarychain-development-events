@@ -18,6 +18,8 @@ global notes for all the 3 projects
   - [Common projects Problems and Fixs](#common-projects-problems-and-fixs)
     - [Problems : Related to Incorrect version of Node](#problems--related-to-incorrect-version-of-node)
   - [Hosts file on running Machine](#hosts-file-on-running-machine)
+- [or](#or)
+- [TODO FIX and clean registerUser.js file](#todo-fix-and-clean-registeruserjs-file)
 
 ## Events Links
 
@@ -175,6 +177,17 @@ Just compared with my environment. I have 1 more attribute: CORE_PEER_CHAINCODEL
 
 export network profile
 
+
+
+
+
+
+
+
+
+
+
+
 $ node contractEventsLocal.js 
 Wallet path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet
 gateway connect
@@ -186,5 +199,40 @@ Failed to submit transaction: Error: Unable to initialize channel. Attempted to 
 
 
 
+require user1 
+https://github.com/horeaporutiu/VSCodeTutorial/issues/3
+
+$ node contractEventsSolidaryChain.js 
+Wallet path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain
+gateway connect
+2020-06-28T01:13:00.945Z - error: [Channel.js]: Channel:allchannel received discovery error:access denied
+2020-06-28T01:13:00.946Z - error: [Channel.js]: Error: Channel:allchannel Discovery error:access denied
+2020-06-28T01:13:00.946Z - error: [Network]: _initializeInternalChannel: Unable to initialize channel. Attempted to contact 1 Peers. Last error was Error: Channel:allchannel Discovery error:access denied
+Failed to submit transaction: Error: Unable to initialize channel. Attempted to contact 1 Peers. Last error was Error: Channel:allchannel Discovery error:access denied
+
+FUCK use `allchannel` and not `channelall`
+
+mario@ubuntu-swarm-1:/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/wallet/fabcar/javascript
+$ mkdir wallet/admin
+# or
+$ rm wallet/admin/*
+$ cp generated/wallets/.hfc-org1/* wallet/admin/
+# TODO FIX and clean registerUser.js file
+$ node registerUser.js user1
+registerUser "user1"
+Wallet path: /srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/wallet/fabcar/javascript/wallet
+Successfully registered and enrolled admin user "user1" and imported it into the wallet
 
 
+
+
+
+remove this this gives me the problem
+3node2channel
+5node2channel
+
+E0628 03:32:23.007811216   24436 ssl_transport_security.cc:1238] Handshake failed with fatal error SSL_ERROR_SSL: error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed.
+2020-06-28T02:32:23.091Z - error: [Remote.js]: Error: Failed to connect before the deadline URL:grpcs://localhost:7051
+2020-06-28T02:32:23.092Z - error: [Channel.js]: Error: Failed to connect before the deadline URL:grpcs://localhost:7051
+2020-06-28T02:32:23.092Z - error: [Network]: _initializeInternalChannel: Unable to initialize channel. Attempted to contact 1 Peers. Last error was Error: Failed to connect before the deadline URL:grpcs://localhost:7051
+Failed to submit transaction: Error: Unable to initialize channel. Attempted to contact 1 Peers. Last error was Error: Failed to connect before the deadline URL:grpcs://localhost:7051

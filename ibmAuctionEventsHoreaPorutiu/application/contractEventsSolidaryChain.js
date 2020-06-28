@@ -1,29 +1,42 @@
+//Import Hyperledger Fabric 1.4 programming model - fabric-network
+'use strict';
+
 const { FileSystemWallet, Gateway, DefaultEventHandlerStrategies } = require('fabric-network');
 const path = require('path');
 const fs = require('fs');
-const util = require('util');
-
-const CHAINCODE_NAME = 'solidary-network-chaincode';
-const CHANNEL_ALL = 'channelall';
 
 //connect to the config file
-const configPath = path.join(process.cwd(), './configLocalSolidaryChain.json');
+const configPath = path.join(process.cwd(), './configSolidaryChain.json');
 const configJSON = fs.readFileSync(configPath, 'utf8');
 const config = JSON.parse(configJSON);
-//connect to the local connection file
-const ccpPath = path.join(process.cwd(), 'local_fabric_connection_solidary_chain.json');
+
+// connect to the local connection file
+// const ccpPath = path.join(process.cwd(), 'local_fabric_connection.json');
+// const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
+// const connectionProfile = JSON.parse(ccpJSON);
+
+// connect to the IBP connection file 
+const ccpPath = config.connectionFile;
 const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
 const connectionProfile = JSON.parse(ccpJSON);
-//A wallet stores a collection of identities for use with local wallet
-const walletPath = path.join(process.cwd(), './local_fabric_wallet_solidary_chain');
+
+// A wallet stores a collection of identities for use with local wallet
+// const walletPath = path.join(process.cwd(), './local_fabric_wallet');
+// const wallet = new FileSystemWallet(walletPath);
+// console.log(`Wallet path: ${walletPath}`);
+
+// A wallet stores a collection of identities for use with local wallet
+const walletPath = path.join(process.cwd(), config.walletPath);
 const wallet = new FileSystemWallet(walletPath);
 console.log(`Wallet path: ${walletPath}`);
-// identity
-const peerIdentity = 'admin';
+
+const peerIdentity = config.peerIdentity;
+console.log(`peerIdentity: ${peerIdentity}`);
 
 async function contractEvents() {
   try {
     let response;
+
     // Check to see if we've already enrolled the user.
     const userExists = await wallet.exists(peerIdentity);
     if (!userExists) {
@@ -43,53 +56,19 @@ async function contractEvents() {
       discovery: config.gatewayDiscovery
     });
     console.log('gateway connect');
-    
+
     //connect to our channel that has been created on IBM Blockchain Platform
-    const network = await gateway.getNetwork(CHANNEL_ALL);
-    // console.log(network);
+    const network = await gateway.getNetwork(config.channelName);
 
-    //connect to our insurance contract that has been installed/ instantiated on IBM Blockchain Platform
-    const contract = await network.getContract(CHAINCODE_NAME);
-    console.log(contract);
+    //connect to our insurance contract that has been installed / instantiated on IBM Blockchain Platform
+    const contract = await network.getContract(config.smartContractName);
 
-    // NEW: https://hyperledger.github.io/fabric-sdk-node/release-1.4/tutorial-channel-events.html
-    // const client = gateway.getClient();
-    // const channel = client.getChannel(CHANNEL_ALL);
-    // console.log('Got addressability to channel');
-    // const eventHub = channel.getChannelEventHub('peer0.org1.example.com:7051');
-    // eventHub.connect(false);
-    // eventHub.registerChaincodeEvent(CHAINCODE_NAME, '(.*?)',
-    //   (event, blockNumber, txId, txStatus) => {
-    //     console.log(event, blockNumber, txId, txStatus);
-    //   });
-
-    //our block listener is listening to our channel, and seeing if any blocks are added to our channel
-    await network.addBlockListener('block-listener', (err, block) => {
-      if (err) {
-        console.log(err);
-        return;
-      }
-
-      console.log(util.inspect(block.header, { showHidden: false, depth: 1 }))
-
-      // console.log('*************** start block header **********************')
-      // console.log(util.inspect(block.header, { showHidden: false, depth: 5 }))
-      // console.log('*************** end block header **********************')
-      // console.log('*************** start block data **********************')
-      // let data = block.data.data[0];
-      // console.log(util.inspect(data, { showHidden: false, depth: 5 }))
-      // console.log('*************** end block data **********************')
-      // console.log('*************** start block metadata ****************')
-      // console.log(util.inspect(block.metadata, { showHidden: false, depth: 5 }))
-      // console.log('*************** end block metadata ****************')
-    });
-
-    // TradeEvent | (.*?)
     await contract.addContractListener('my-contract-listener', '(.*?)', (err, event, blockNumber, transactionId, status) => {
       if (err) {
         console.error(err);
         return;
       }
+
       //convert event to something we can parse 
       event = event.payload.toString();
       event = JSON.parse(event)
@@ -104,7 +83,7 @@ async function contractEvents() {
     // ID=E9kIT
     // ${BASE_CMD} -c "{ \"Args\" : [\"participant_createWithParameters\", \"${ID}\", \"${ID}\", \"${ID}\" ] }"
     // ${BASE_CMD} -c "{ \"Args\" : [\"participant_get\", \"${ID}\" ] }"
-    const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
+    // const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
     for (let i = 0; i < 280; i++) {
       const id = makeid(5);
       console.log(`participant_createWithParameters: ${id}`);
