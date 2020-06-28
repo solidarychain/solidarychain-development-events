@@ -1,0 +1,49 @@
+{
+	"version": "1.0.0",
+	"certificateAuthorities": {
+		"Org1CA": {
+			"caName": "ca",
+			"url": "http://192.168.1.31:7054",
+      "httpOptions": {
+        "verify": false
+      },
+      "tlsCACerts": {
+        "path": "/tmp/firstNetworkEvents/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
+      }
+		}
+	},
+	"client": {
+		"connection": {
+			"timeout": {
+				"orderer": "300",
+				"peer": {
+					"endorser": "300"
+				}
+			}
+		},
+		"organization": "Org1MSP"
+	},
+	"name": "Org1",
+	"organizations": {
+		"Org1MSP": {
+			"certificateAuthorities": [
+				"Org1CA"
+			],
+			"mspid": "Org1MSP",
+			"peers": [
+				"Org1Peer1"
+			]
+		}
+	},
+	"peers": {
+		"Org1Peer1": {
+			"url": "grpcs://192.168.1.31:7051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.org1.example.com"
+      },
+      "tlsCACerts": {
+        "path": "/tmp/firstNetworkEvents/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
+      }
+		}
+	}
+}

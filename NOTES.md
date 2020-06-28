@@ -227,7 +227,7 @@ Successfully registered and enrolled admin user "user1" and imported it into the
 
 
 
-remove this this gives me the problem
+remove this this gives me the problem, this is dangle in nodes 1 2 3 4 5 6
 3node2channel
 5node2channel
 

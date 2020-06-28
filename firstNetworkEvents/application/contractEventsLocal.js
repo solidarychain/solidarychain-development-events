@@ -13,6 +13,7 @@ const CHANNEL = 'channelall';
 
 //connect to the config file
 const configPath = path.join(process.cwd(), './configLocal.json');
+// const configPath = path.join(process.cwd(), './configLocalRemote.json');
 const configJSON = fs.readFileSync(configPath, 'utf8');
 const config = JSON.parse(configJSON);
 // connect to the local connection file
@@ -64,10 +65,11 @@ async function contractEvents() {
       event = event.payload.toString();
       event = JSON.parse(event)
 
-      //where we output the TradeEvent
-      console.log('************************ Start Trade Event *******************************************************');
+      //where we output the Event
+      console.log(`************************ Start Event *******************************************************`);
       console.log(`Block Number: ${blockNumber} Transaction ID: ${transactionId} Status: ${status}`);
       console.log(JSON.stringify(event, undefined, 2));
+      console.log(`************************ End Event *********************************************************`);
     });
 
     // use on first time only to create gov
