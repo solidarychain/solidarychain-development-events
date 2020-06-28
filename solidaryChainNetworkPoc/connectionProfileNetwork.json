@@ -80,7 +80,7 @@
         "peer0.org1.example.com"
       ],
       "adminPrivateKey": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/a137d5a090fbfb9efb14b928da545a7133306655ba116ad865bac7cb4c3be587_sk"
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/96af36cbe8c2ac499a47caac626b1dff0ae69ce89e19d4ddc64ecf7edb4c15f9_sk"
       },
       "signedCert": {
         "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"

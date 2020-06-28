@@ -1,0 +1,14 @@
+{
+  "connectionFile": "local_fabric_connection.json",
+  "walletPath": "/media/mario/Storage/Documents/Development/HyperLedger/fabric-samples/fabcar/javascript/wallet/",
+  "peerIdentity": "admin",
+  "appAdmin": "admin",
+  "appAdminSecret": "adminpw",
+  "orgMSPID": "Org1MSP",
+  "caName": "ca_peerOrg1",
+  "userName": "V1",
+  "gatewayDiscovery": {
+    "enabled": true,
+    "asLocalhost": true
+  }
+}

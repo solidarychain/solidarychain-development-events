@@ -70,7 +70,7 @@ async function blockContractAndTransactionEvents() {
       console.log('*************** end block metadata ****************')
     });
 
-    await contract.addContractListener('my-contract-listener', 'TransactionCreated'/*'TradeEvent'*/, (err, event, blockNumber, transactionId, status) => {
+    await contract.addContractListener('my-contract-listener', '(.*?)'/*'TradeEvent'*/, (err, event, blockNumber, transactionId, status) => {
       if (err) {
         console.error(err);
         return;

@@ -1,4 +1,5 @@
 {
+  "version": "1.0.0",
   "certificateAuthorities": {
     "ca.org1.example.com": {
       "caName": "ca.org1.example.com",
@@ -7,7 +8,7 @@
         "verify": false
       },
       "tlsCACerts": {
-        "path": "/home/mario/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
       }
     }
   },
@@ -33,23 +34,23 @@
         "peer0.org1.example.com"
       ],
       "adminPrivateKey": {
-        "path": "/home/mario/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/a137d5a090fbfb9efb14b928da545a7133306655ba116ad865bac7cb4c3be587_sk"
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/a7e5c7b09b66725abbe58acdb51492420df4cdb9bbd4d2f913e506251b92500a_sk"
       },
       "signedCert": {
-        "path": "/home/mario/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
       }
     }
   },
   "peers": {
     "peer0.org1.example.com": {
-      "url": "grpcs://192.168.1.64:7051",
+      "url": "grpcs://peer0.org1.example.com:7051",
+      "eventUrl": "grpcs://peer0.org1.example.com:7052",
       "grpcOptions": {
         "ssl-target-name-override": "peer0.org1.example.com"
       },
       "tlsCACerts": {
-        "path": "/home/mario/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
       }
     }
-  },
-  "version": "1.0.0"
+  }
 }
