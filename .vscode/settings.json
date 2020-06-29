@@ -11,5 +11,8 @@
     "panel.border": "#2f7c47",
     "sideBar.border": "#2f7c47"
   },
-  "peacock.remoteColor": "#215732"
+  "peacock.remoteColor": "#215732",
+  "cSpell.words": [
+    "chaincode"
+  ]
 }

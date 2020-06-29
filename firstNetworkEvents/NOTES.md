@@ -143,7 +143,17 @@ $ node contractEventsLocal.js
 2020-06-28T13:38:57.792Z - warn: [DiscoveryEndorsementHandler]: _build_endorse_group_member >> G0:0 - endorsement failed - Error: transaction returned with failure: {"name":"Error","status":500,"message":"There is no gov participant"}
 # run node script, first time is required to wait a few seconds, be patient
 $ node contractEventsLocal.js
-
+************************ Start Event *******************************************************
+Block Number: 26 Transaction ID: dea2a83fc6590dd0787175ea6c645ae8c314e9f8d51368c2703a5c45e7cbe4e3 Status: VALID
+{
+  "id": "4ea88521-031b-4279-9165-9c10e188bGai",
+  "type": "network.solidary.convector.participant",
+  "code": "8bGai",
+  "name": "Participant 8bGai",
+  "msp": "Org1MSP",
+  "participant": {
+    "id": "c8ca045c-9d1b-407f-b9ae-31711758f2d0",
+    ...
 ```
 
 ## Try in Remote Host
@@ -159,6 +169,17 @@ $ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/HyperLedge
 $ cd /tmp/firstNetworkEvents/application
 # change to config to configLocalRemote.json
 $ nano contractEventsLocal.js
+************************ Start Event *******************************************************
+Block Number: 26 Transaction ID: dea2a83fc6590dd0787175ea6c645ae8c314e9f8d51368c2703a5c45e7cbe4e3 Status: VALID
+{
+  "id": "4ea88521-031b-4279-9165-9c10e188bGai",
+  "type": "network.solidary.convector.participant",
+  "code": "8bGai",
+  "name": "Participant 8bGai",
+  "msp": "Org1MSP",
+  "participant": {
+    "id": "c8ca045c-9d1b-407f-b9ae-31711758f2d0",
+    ...
 ```
 
 ```javascript

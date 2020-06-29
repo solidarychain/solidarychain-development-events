@@ -1,5 +1,8 @@
 {
-  "connection_file": "local_fabric_connection.json",
+  "connectionFile": "local_fabric_connection_solidary_chain.json",
+  "walletPath":"./local_fabric_wallet_solidary_chain",
+  "chaincodeName": "solidary-network-chaincode",
+  "channel": "channelall",
   "appAdmin": "admin",
   "appAdminSecret": "adminpw",
   "orgMSPID": "Org1MSP",

@@ -35,7 +35,7 @@
         "ca.org1.example.com"
       ],
       "adminPrivateKey": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/f46b603d335381823acefe3b46df9a541b26b7695af4e3ea305712119402ddef_sk"
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/e889e94df7a1b7d1e5079f537bc0518026e161462f74fdcf8152c44f63947542_sk"
       },
       "signedCert": {
         "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"

@@ -3,19 +3,17 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 
-const CHAINCODE_NAME = 'solidary-network-chaincode';
-const CHANNEL_ALL = 'channelall';
-
 //connect to the config file
-const configPath = path.join(process.cwd(), './configLocalSolidaryChain.json');
+// const configPath = path.join(process.cwd(), './configLocalSolidaryChain.json');
+const configPath = path.join(process.cwd(), './configLocalSolidaryChainConvector.json');
 const configJSON = fs.readFileSync(configPath, 'utf8');
 const config = JSON.parse(configJSON);
 //connect to the local connection file
-const ccpPath = path.join(process.cwd(), 'local_fabric_connection_solidary_chain.json');
+const ccpPath = path.join(process.cwd(), config.connectionFile);
 const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
 const connectionProfile = JSON.parse(ccpJSON);
 //A wallet stores a collection of identities for use with local wallet
-const walletPath = path.join(process.cwd(), './local_fabric_wallet_solidary_chain');
+const walletPath = path.join(process.cwd(), config.walletPath);
 const wallet = new FileSystemWallet(walletPath);
 console.log(`Wallet path: ${walletPath}`);
 // identity
@@ -45,20 +43,20 @@ async function contractEvents() {
     console.log('gateway connect');
     
     //connect to our channel that has been created on IBM Blockchain Platform
-    const network = await gateway.getNetwork(CHANNEL_ALL);
+    const network = await gateway.getNetwork(config.channel);
     // console.log(network);
 
     //connect to our insurance contract that has been installed/ instantiated on IBM Blockchain Platform
-    const contract = await network.getContract(CHAINCODE_NAME);
+    const contract = await network.getContract(config.chaincodeName);
     console.log(contract);
 
     // NEW: https://hyperledger.github.io/fabric-sdk-node/release-1.4/tutorial-channel-events.html
     // const client = gateway.getClient();
-    // const channel = client.getChannel(CHANNEL_ALL);
+    // const channel = client.getChannel(config.channel);
     // console.log('Got addressability to channel');
     // const eventHub = channel.getChannelEventHub('peer0.org1.example.com:7051');
     // eventHub.connect(false);
-    // eventHub.registerChaincodeEvent(CHAINCODE_NAME, '(.*?)',
+    // eventHub.registerChaincodeEvent(config.chaincodeName, '(.*?)',
     //   (event, blockNumber, txId, txStatus) => {
     //     console.log(event, blockNumber, txId, txStatus);
     //   });

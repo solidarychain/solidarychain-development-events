@@ -1,0 +1,37 @@
+{
+  "name": "solidary-chain",
+  "version": "1.0.0",
+  "client": {
+    "connection": {
+      "timeout": {
+        "orderer": "300",
+        "peer": {
+          "endorser": "300"
+        }
+      }
+    },
+    "organization": "Org1MSP"
+  },
+  "organizations": {
+    "Org1MSP": {
+      "certificateAuthorities": [
+        "ca.org1.hurley.lab"
+      ],
+      "mspid": "org1MSP",
+      "peers": [
+        "peer0.org1.hurley.lab"
+      ]
+    }
+  },
+  "peers": {
+    "peer0.org1.hurley.lab": {
+      "url": "grpc://localhost:7051"
+    }
+  },
+  "certificateAuthorities": {
+    "ca.org1.hurley.lab": {
+      "caName": "ca.org1.hurley.lab",
+      "url": "http://localhost:7054"
+    }
+  }
+}

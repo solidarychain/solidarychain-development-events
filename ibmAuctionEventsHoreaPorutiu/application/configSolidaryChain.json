@@ -9,7 +9,7 @@
   "caName": "ca.org1.example.com:7054",
   "peer": "peer0.org1.example.com:7051",
   "orderer": "orderer1.example.com:7050",
-  "peerIdentity": "user1",
+  "peerIdentity": "admin",
   "gatewayDiscovery": {
     "enabled": true,
     "asLocalhost": false
