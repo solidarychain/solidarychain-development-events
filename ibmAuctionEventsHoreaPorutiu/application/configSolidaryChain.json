@@ -1,8 +1,8 @@
 {
-  "channelName": "channelall",
-  "smartContractName": "solidary-network-chaincode",
-  "walletPath": "./local_fabric_wallet_solidary_chain",
   "connectionFile": "connection_solidary_chain.json",
+  "walletPath": "./local_fabric_wallet_solidary_chain",
+  "chaincodeName": "solidary-network-chaincode",
+  "channelName": "channelall",
   "appAdmin": "admin",
   "appAdminSecret": "adminpw",
   "orgMSPID": "Org1MSP",

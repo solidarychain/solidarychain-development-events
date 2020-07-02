@@ -2,26 +2,13 @@
   "name": "solidary-chain",
   "version": "1.0.0",
   "client": {
+    "organization": "Org1MSP",
     "connection": {
       "timeout": {
         "orderer": "300",
         "peer": {
           "endorser": "300"
         }
-      }
-    },
-    "organization": "Org1MSP"
-  },
-  "channels": {
-    "channelall": {
-      "orderers": [
-        "orderer1.example.com"
-      ],
-      "peer0.org1.example.com": {
-        "endorsingPeer": true,
-        "chaincodeQuery": true,
-        "ledgerQuery": true,
-        "eventSource": true
       }
     }
   },
@@ -35,22 +22,10 @@
         "ca.org1.example.com"
       ],
       "adminPrivateKey": {
-        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/e889e94df7a1b7d1e5079f537bc0518026e161462f74fdcf8152c44f63947542_sk"
+        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/51daf0aa65821c97446de8875583f8d9d25b8aaabf6b48adb12de474b017a027_sk"
       },
       "signedCert": {
         "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
-      }
-    }
-  },
-  "orderers": {
-    "orderer1.example.com": {
-      "url": "grpcs://localhost:7050",
-      "grpcOptions": {
-        "ssl-target-name-override": "orderer1.example.com",
-        "grpc-max-send-message-length": -1
-      },
-      "tlsCACerts": {
-        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
       }
     }
   },
@@ -63,18 +38,6 @@
       },
       "tlsCACerts": {
         "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
-      }
-    }
-  },
-  "certificateAuthorities": {
-    "ca.org1.example.com": {
-      "caName": "ca.org1.example.com",
-      "url": "https://localhost:7054",
-      "httpOptions": {
-        "verify": false
-      },
-      "tlsCACerts": {
-        "path": "/srv/docker/hyperledger-fabric-extra_hosts-5orgs/fabric-samples/5node2channel/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
       }
     }
   }

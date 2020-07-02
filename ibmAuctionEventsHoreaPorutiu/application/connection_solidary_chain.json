@@ -2,6 +2,7 @@
   "name": "solidary-chain",
   "version": "1.0.0",
   "client": {
+    "organization": "Org1",
     "connection": {
       "timeout": {
         "orderer": "300",
@@ -9,49 +10,27 @@
           "endorser": "300"
         }
       }
-    },
-    "organization": "Org1MSP"
+    }
   },
   "channels": {
     "channelall": {
       "orderers": [
         "orderer1.example.com"
       ],
-      "peer0.org1.example.com": {
-        "endorsingPeer": true,
-        "chaincodeQuery": true,
-        "ledgerQuery": true,
-        "eventSource": true
+      "peers": {
+        "peer0.org1.example.com": {}
       }
     }
   },
   "organizations": {
-    "Org1MSP": {
+    "Org1": {
       "mspid": "Org1MSP",
       "peers": [
         "peer0.org1.example.com"
       ],
       "certificateAuthorities": [
         "ca.org1.example.com"
-      ],
-      "adminPrivateKey": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/e889e94df7a1b7d1e5079f537bc0518026e161462f74fdcf8152c44f63947542_sk"
-      },
-      "signedCert": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
-      }
-    }
-  },
-  "orderers": {
-    "orderer1.example.com": {
-      "url": "grpcs://orderer1.example.com:7050",
-      "grpcOptions": {
-        "ssl-target-name-override": "orderer1.example.com",
-        "grpc-max-send-message-length": -1
-      },
-      "tlsCACerts": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
-      }
+      ]
     }
   },
   "peers": {

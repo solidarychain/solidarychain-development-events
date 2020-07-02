@@ -48,7 +48,7 @@ async function contractEvents() {
 
     //connect to our insurance contract that has been installed/ instantiated on IBM Blockchain Platform
     const contract = await network.getContract(config.chaincodeName);
-    console.log(contract);
+    // console.log(contract);
 
     // NEW: https://hyperledger.github.io/fabric-sdk-node/release-1.4/tutorial-channel-events.html
     // const client = gateway.getClient();

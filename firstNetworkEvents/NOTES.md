@@ -74,7 +74,7 @@ couchdb2                              4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp
 ```shell
 $ CHANNEL="channelall"
 $ CHAINCODE_NAME="sncc"
-$ CHAINCODE_CONVECTOR=s"olidary-network-chaincode"
+$ CHAINCODE_CONVECTOR="solidary-network-chaincode"
 $ CHAINCODE="${CHAINCODE_NAME}@1.0.cds"
 $ VERSION="1.0"
 $ CHAINCODE_DEPLOYMENT_PATH="/src/github.com/hyperledger/fabric/peer"
@@ -139,6 +139,7 @@ wallet path location: `/home/mario/Development/HyperLedger/fabric-samples/fabcar
 $ cd /home/mario/Development/@Solidary.Network/solidarynetwork-development-events/firstNetworkEvents/application/
 
 # edit node contractEventsLocal.js and uncomment `// const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);` line to prevent bellow error, after firts time run, we comment it
+$ code contractEventsLocal.js
 $ node contractEventsLocal.js
 2020-06-28T13:38:57.792Z - warn: [DiscoveryEndorsementHandler]: _build_endorse_group_member >> G0:0 - endorsement failed - Error: transaction returned with failure: {"name":"Error","status":500,"message":"There is no gov participant"}
 # run node script, first time is required to wait a few seconds, be patient

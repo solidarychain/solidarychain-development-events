@@ -211,7 +211,7 @@ Failed to submit transaction: Error: Unable to initialize channel. Attempted to 
 change ports to match running containers
 
 
-update wallet admin with new crypto
+update wallet admin with new crypto: IT WORKS
 participant_createWithParameters: NUYwB
 2020-06-27T11:28:58.232Z - warn: [DiscoveryEndorsementHandler]: _build_endorse_group_member >> G0:0 - endorsement failed - Error: 2 UNKNOWN: access denied: channel [channelall] creator org [Org1MSP]
 Failed to submit transaction: Error: Endorsement has failed

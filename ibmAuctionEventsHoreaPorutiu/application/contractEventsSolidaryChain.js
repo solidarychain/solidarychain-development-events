@@ -61,8 +61,8 @@ async function contractEvents() {
     const network = await gateway.getNetwork(config.channelName);
 
     //connect to our insurance contract that has been installed / instantiated on IBM Blockchain Platform
-    const contract = await network.getContract(config.smartContractName);
-    console.log(contract.network.channel);
+    const contract = await network.getContract(config.chaincodeName);
+    // console.log(contract.network.channel);
 
     await contract.addContractListener('my-contract-listener', '(.*?)', (err, event, blockNumber, transactionId, status) => {
       if (err) {

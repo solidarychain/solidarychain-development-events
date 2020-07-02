@@ -2,6 +2,7 @@
 	"name": "Org1",
 	"version": "1.0.0",
 	"client": {
+		"organization": "Org1MSP",
 		"connection": {
 			"timeout": {
 				"orderer": "300",
@@ -9,8 +10,7 @@
 					"endorser": "300"
 				}
 			}
-		},
-		"organization": "Org1MSP"
+		}
 	},
 	"organizations": {
 		"Org1MSP": {

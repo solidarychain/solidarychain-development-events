@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../../../HyperLedger/fabric-samples/first-network"
+		},
+		{
+			"path": "../../../HyperLedger/fabric-samples-rip"
 		}
 	],
 	"settings": {

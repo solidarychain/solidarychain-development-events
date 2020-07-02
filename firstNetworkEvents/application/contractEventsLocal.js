@@ -73,7 +73,7 @@ async function contractEvents() {
     });
 
     // use on first time only to create gov
-    // const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
+    const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
     for (let i = 0; i < 280; i++) {
       const id = makeid(5);
       // console.log(`participant_createWithParameters: ${id}`);

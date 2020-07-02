@@ -1,0 +1,219 @@
+{
+  "name": "solidary-chain",
+  "version": "1.0.0",
+  "client": {
+    "organization": "Org1MSP",
+    "connection": {
+      "timeout": {
+        "orderer": "300",
+        "peer": {
+          "endorser": "300"
+        }
+      }
+    }
+  },
+  "channels": {
+    "channelall": {
+      "orderers": [
+        "orderer1.example.com",
+        "orderer2.example.com",
+        "orderer3.example.com",
+        "orderer4.example.com",
+        "orderer5.example.com"
+      ],
+      "peer0.org1.example.com": {},
+      "peer0.org2.example.com": {},
+      "peer0.org3.example.com": {},
+      "peer0.org4.example.com": {},
+      "peer0.org5.example.com": {}
+    }
+  },
+  "organizations": {
+    "Org1MSP": {
+      "mspid": "Org1MSP",
+      "peers": [
+        "peer0.org1.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org1.example.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/83bca3eab700381d3c4a91bd48109f650246df35f635bfff96dbd185d8d0b4af_sk"
+      },
+      "signedCert": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+      }
+    },
+    "Org2MSP": {
+      "mspid": "Org2MSP",
+      "peers": [
+        "peer0.org2.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org2.example.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/keystore/83bca3eab700381d3c4a91bd48109f650246df35f635bfff96dbd185d8d0b4af_sk"
+      },
+      "signedCert": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+      }
+    },
+    "Org3MSP": {
+      "mspid": "Org3MSP",
+      "peers": [
+        "peer0.org3.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org3.example.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/keystore/83bca3eab700381d3c4a91bd48109f650246df35f635bfff96dbd185d8d0b4af_sk"
+      },
+      "signedCert": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org3.example.com/users/Admin@org3.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+      }
+    },
+    "Org4MSP": {
+      "mspid": "Org4MSP",
+      "peers": [
+        "peer0.org4.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org4.example.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/keystore/83bca3eab700381d3c4a91bd48109f650246df35f635bfff96dbd185d8d0b4af_sk"
+      },
+      "signedCert": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org4.example.com/users/Admin@org4.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+      }
+    },
+    "Org5MSP": {
+      "mspid": "Org5MSP",
+      "peers": [
+        "peer0.org5.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org5.example.com"
+      ],
+      "adminPrivateKey": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org5.example.com/users/Admin@org5.example.com/msp/keystore/83bca3eab700381d3c4a91bd48109f650246df35f635bfff96dbd185d8d0b4af_sk"
+      },
+      "signedCert": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org5.example.com/users/Admin@org5.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+      }
+    }
+  },
+  "orderers": {
+    "orderer1.example.com": {
+      "url": "grpcs://orderer1.example.com:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer1.example.com",
+        "grpc-max-send-message-length": -1
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+      }
+    },
+    "orderer2.example.com": {
+      "url": "grpcs://orderer2.example.com:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer2.example.com",
+        "grpc-max-send-message-length": -1
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+      }
+    },
+    "orderer3.example.com": {
+      "url": "grpcs://orderer3.example.com:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer3.example.com",
+        "grpc-max-send-message-length": -1
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer3.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+      }
+    },
+    "orderer4.example.com": {
+      "url": "grpcs://orderer4.example.com:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer4.example.com",
+        "grpc-max-send-message-length": -1
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer4.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+      }
+    },
+    "orderer5.example.com": {
+      "url": "grpcs://orderer5.example.com:7050",
+      "grpcOptions": {
+        "ssl-target-name-override": "orderer5.example.com",
+        "grpc-max-send-message-length": -1
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer5.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+      }
+    }        
+  },
+  "peers": {
+    "peer0.org1.example.com": {
+      "url": "grpcs://peer0.org1.example.com:7051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.org1.example.com"
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
+      }
+    },
+    "peer0.org2.example.com": {
+      "url": "grpcs://peer0.org2.example.com:8051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.org2.example.com"
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org2.example.com/msp/tlscacerts/tlsca.org2.example.com-cert.pem"
+      }
+    },
+    "peer0.org3.example.com": {
+      "url": "grpcs://peer0.org3.example.com:9051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.org3.example.com"
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org3.example.com/msp/tlscacerts/tlsca.org3.example.com-cert.pem"
+      }
+    },
+    "peer0.org4.example.com": {
+      "url": "grpcs://peer0.org4.example.com:10051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.org4.example.com"
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org4.example.com/msp/tlscacerts/tlsca.org4.example.com-cert.pem"
+      }
+    },
+    "peer0.org5.example.com": {
+      "url": "grpcs://peer0.org5.example.com:11051",
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.org5.example.com"
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org5.example.com/msp/tlscacerts/tlsca.org5.example.com-cert.pem"
+      }
+    }
+  },
+  "certificateAuthorities": {
+    "ca.org1.example.com": {
+      "caName": "ca.org1.example.com",
+      "url": "https://ca.org1.example.com:7054",
+      "httpOptions": {
+        "verify": false
+      },
+      "tlsCACerts": {
+        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
+      }
+    }
+  }
+}
