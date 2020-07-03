@@ -66,35 +66,27 @@ $ node transactionEventsLocal.js
 
 ## Connect to SolidaryChain Network
 
-create file
-/home/mario/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/application/local_fabric_connection_solidary_chain.json
-form
-5node2channel/server-graphql/org1.network-profile-raft.yaml
-using 
-https://onlineyamltools.com/convert-yaml-to-json
+create file `/home/mario/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/application/local_fabric_connection_solidary_chain.json` from `5node2channel/server-graphql/org1.network-profile-raft.yaml` using 
+<https://onlineyamltools.com/convert-yaml-to-json>
 
-don't forget to replace
-`/usr/src/app/packages/server-graphql/crypto-config`
-with
-`/home/mario/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/crypto-config`
+don't forget to replace `/usr/src/app/packages/server-graphql/crypto-config` with `/home/mario/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/crypto-config`
 
-and
-`/usr/src/app/packages/server-graphql/.hfc-org1`
-with 
-`/home/mario/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain`
+and `/usr/src/app/packages/server-graphql/.hfc-org1` with  `/home/mario/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain`
 
 create a sym link to source folder
+
+> update use `updateWalletSolidaryNetwork.sh` script
 
 ```shell
 # dont work with sym links
 # $ ln -s ../../../../solidarynetwork-development-monorepo/network/generated/wallets/.hfc-org1/ admin
 # copy
-cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application
-rm local_fabric_wallet_solidary_chain/admin/*
-rm local_fabric_wallet_solidary_chain/user1/*
+$ cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application
+$ rm local_fabric_wallet_solidary_chain/admin/*
+$ rm local_fabric_wallet_solidary_chain/user1/*
 
-cp ../../../solidarynetwork-development-monorepo/network/generated/wallets/.hfc-org1/* local_fabric_wallet_solidary_chain/admin/
-ls local_fabric_wallet_solidary_chain/admin/
+$ cp ../../../solidarynetwork-development-monorepo/network/generated/wallets/.hfc-org1/* local_fabric_wallet_solidary_chain/admin/
+$ ls local_fabric_wallet_solidary_chain/admin/
 
 WIP: copyed from 61 with mc to local_fabric_wallet_solidary_chain/user1/
 
