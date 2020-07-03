@@ -3,8 +3,9 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 
-//connect to the config file
+// connect to the config file
 // const configPath = path.join(process.cwd(), './configLocalSolidaryChain.json');
+// use convector local network
 const configPath = path.join(process.cwd(), './configLocalSolidaryChainConvector.json');
 const configJSON = fs.readFileSync(configPath, 'utf8');
 const config = JSON.parse(configJSON);
@@ -102,7 +103,7 @@ async function contractEvents() {
     // ID=E9kIT
     // ${BASE_CMD} -c "{ \"Args\" : [\"participant_createWithParameters\", \"${ID}\", \"${ID}\", \"${ID}\" ] }"
     // ${BASE_CMD} -c "{ \"Args\" : [\"participant_get\", \"${ID}\" ] }"
-    const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
+    // const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
     for (let i = 0; i < 280; i++) {
       const id = makeid(5);
       console.log(`participant_createWithParameters: ${id}`);

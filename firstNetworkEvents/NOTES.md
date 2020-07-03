@@ -232,8 +232,10 @@ it works remotely to
 ```shell
 docker kill $(docker ps -q)
 docker rm $(docker ps -qa)
-docker system prune -a 
-docker volume prune
+# use -f force Do not prompt for confirmation
+docker system prune -a -f
+docker volume prune -f
+docker network prune -f
 ```
 
 > use only if encounter errors like: 

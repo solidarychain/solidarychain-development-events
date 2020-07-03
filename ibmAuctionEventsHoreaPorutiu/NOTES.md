@@ -92,6 +92,7 @@ create a sym link to source folder
 cd /home/mario/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application
 rm local_fabric_wallet_solidary_chain/admin/*
 rm local_fabric_wallet_solidary_chain/user1/*
+
 cp ../../../solidarynetwork-development-monorepo/network/generated/wallets/.hfc-org1/* local_fabric_wallet_solidary_chain/admin/
 ls local_fabric_wallet_solidary_chain/admin/
 
@@ -99,6 +100,7 @@ WIP: copyed from 61 with mc to local_fabric_wallet_solidary_chain/user1/
 
 cp ../../../solidarynetwork-development-monorepo/network/wallet/user1/ local_fabric_wallet_solidary_chain/user1/
 ls local_fabric_wallet_solidary_chain/user1/
+
 # don\'t forget to update `adminPrivateKey` with new `_sk` file
 ls /home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/
 ```
@@ -208,8 +210,9 @@ Failed to submit transaction: Error: Endorsement has failed
 2020-06-27T00:51:01.590Z - error: [Network]: _initializeInternalChannel: Unable to initialize channel. Attempted to contact 1 Peers. Last error was Error: Failed to connect before the deadline URL:grpc://localhost:17051
 Failed to submit transaction: Error: Unable to initialize channel. Attempted to contact 1 Peers. Last error was Error: Failed to connect before the deadline URL:grpc://localhost:17051
 
-change ports to match running containers
+if is hurley network init network first with ibmAuctionEventsHoreaPorutiu/hurley-working-network/initChaincode.sh
 
+change ports to match running containers
 
 update wallet admin with new crypto: IT WORKS
 participant_createWithParameters: NUYwB
