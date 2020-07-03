@@ -68,10 +68,11 @@ work with 5 networks
 
 ```shell
 # run with 
+$ cd solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application
 # ibm network
 $ node contractEventsLocal.js 
 # all other networks
 $ node contractEventsLocalSolidaryChain.js
 # remote production network
-$ node contractEventsSolidaryChain.js  
+$ node contractEventsSolidaryChain.js
 ```
