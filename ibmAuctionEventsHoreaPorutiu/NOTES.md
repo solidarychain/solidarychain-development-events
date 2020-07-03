@@ -81,7 +81,7 @@ with
 and
 `/usr/src/app/packages/server-graphql/.hfc-org1`
 with 
-`/home/mario/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain`
+`/home/mario/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain`
 
 create a sym link to source folder
 
@@ -89,7 +89,7 @@ create a sym link to source folder
 # dont work with sym links
 # $ ln -s ../../../../solidarynetwork-development-monorepo/network/generated/wallets/.hfc-org1/ admin
 # copy
-cd /home/mario/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application
+cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application
 rm local_fabric_wallet_solidary_chain/admin/*
 rm local_fabric_wallet_solidary_chain/user1/*
 
@@ -252,3 +252,21 @@ create policy, get from P3 notes
 ssh ${PEER0_ORG1_IP} "docker exec cli peer chaincode instantiate -o orderer.example.com:7050 -l node -C ${CHANNEL_ALL} -n ${CHAINCODE_NAME} github.com/chaincode/chaincode-solidary-network-chaincode -v 1.0 -c '{\"Args\": [\"a\", \"100\"]}' -P \"OR(${POLICY_CHANNELALL})\""
 
 done is solves the problem
+
+
+
+
+
+# use node 8.16.0
+
+$ node contractEventsSolidaryChain.js 
+/media/mario/Storage/Documents/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application/node_modules/grpc/src/grpc_extension.js:55
+    throw error;
+    ^
+
+Error: Failed to load gRPC binary module because it was not installed for the current system
+Expected directory: node-v59-linux-x64-glibc
+Found: [node-v57-linux-x64-glibc]
+This problem can often be fixed by running "npm rebuild" on the current system
+Original error: Cannot find module '/media/mario/Storage/Documents/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application/node_modules/grpc/src/node/extension_binary/node-v59-linux-x64-glibc/grpc_node.node'
+

@@ -1,0 +1,13 @@
+{
+  "connectionFile": "local_fabric_connection_hurley.json",
+  "chaincodeName" : "solidary-network-chaincode",
+  "walletPath":"./local_fabric_wallet_solidary_chain_hurley",
+  "channel" : "ch1",
+  "peerIdentity": "admin",
+  "appAdmin": "admin",
+  "appAdminSecret": "adminpw",
+  "orgMSPID": "org1",
+  "caName": "ca.org1.hurley.lab",
+  "userName": "V1",
+  "gatewayDiscovery": { "enabled": true, "asLocalhost": true }
+}

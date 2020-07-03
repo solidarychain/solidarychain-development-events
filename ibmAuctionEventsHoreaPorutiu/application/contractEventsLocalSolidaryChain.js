@@ -3,10 +3,15 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 
+debugger;
 // connect to the config file
+// opt#1: local solidaryChain production network
 // const configPath = path.join(process.cwd(), './configLocalSolidaryChain.json');
-// use convector local network
-const configPath = path.join(process.cwd(), './configLocalSolidaryChainConvector.json');
+// opt#2: local convector local network development (ibmAuctionEventsHoreaPorutiu/hurley-working-network)
+// const configPath = path.join(process.cwd(), './configLocalSolidaryChainConvector.json');
+// opt#3: local hurley development network: used in chaincode development
+const configPath = path.join(process.cwd(), './configLocalSolidaryChainHurley.json');
+
 const configJSON = fs.readFileSync(configPath, 'utf8');
 const config = JSON.parse(configJSON);
 //connect to the local connection file

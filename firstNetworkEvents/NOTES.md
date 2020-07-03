@@ -91,7 +91,7 @@ eabcc60e4b14        hyperledger/fabric-peer:latest   peer1.org1.example.com   0.
 7078c75a5afe        hyperledger/fabric-peer:latest   peer0.org2.example.com   0.0.0.0:9051->9051/tcp
 
 # change to project path
-$ cd /home/mario/Development/@Solidary.Network/solidarynetwork-development-events/firstNetworkEvents
+$ cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents
 # copy chaincode to cli
 $ docker cp contract/${CHAINCODE} cli:/opt/gopath/${CHAINCODE_DEPLOYMENT_PATH}/${CHAINCODE}
 # install to peer0.org1
@@ -136,7 +136,7 @@ wallet path location: `/home/mario/Development/HyperLedger/fabric-samples/fabcar
 
 ```shell
 # change to project path
-$ cd /home/mario/Development/@Solidary.Network/solidarynetwork-development-events/firstNetworkEvents/application/
+$ cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents/application/
 
 # edit node contractEventsLocal.js and uncomment `// const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);` line to prevent bellow error, after firts time run, we comment it
 $ code contractEventsLocal.js
@@ -162,7 +162,7 @@ Block Number: 26 Transaction ID: dea2a83fc6590dd0787175ea6c645ae8c314e9f8d51368c
 ```shell
 SOURCE_IP=192.168.1.64
 # copy files to local filesystem
-$ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/@Solidary.Network/solidarynetwork-development-events/firstNetworkEvents /tmp
+$ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents /tmp
 $ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/HyperLedger/fabric-samples/fabcar/javascript/wallet/ /tmp/firstNetworkEvents
 $ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/HyperLedger/fabric-samples/first-network/crypto-config /tmp/firstNetworkEvents
 

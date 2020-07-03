@@ -137,7 +137,7 @@ peer1.org1.example.com:
 dont DOWN node1, it will re-create new CA's in ca and we have this error again...and again
 
 node contractEventsLocalSolidaryChain.js 
-Wallet path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain
+Wallet path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain
 gateway connect
 E0626 23:34:54.484608996   21243 ssl_transport_security.cc:1238] Handshake failed with fatal error SSL_ERROR_SSL: error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed.
 E0626 23:34:55.486352893   21243 ssl_transport_security.cc:1238] Handshake failed with fatal error SSL_ERROR_SSL: error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed.
@@ -189,7 +189,7 @@ export network profile
 
 
 $ node contractEventsLocal.js 
-Wallet path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet
+Wallet path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet
 gateway connect
 2020-06-27T13:50:29.725Z - error: [Remote.js]: Error: Failed to connect before the deadline URL:grpc://localhost:17071
 2020-06-27T13:50:29.725Z - error: [Channel.js]: Error: Failed to connect before the deadline URL:grpc://localhost:17071
@@ -203,7 +203,7 @@ require user1
 https://github.com/horeaporutiu/VSCodeTutorial/issues/3
 
 $ node contractEventsSolidaryChain.js 
-Wallet path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarynetwork-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain
+Wallet path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarychain-development-events/ibmAuctionEventsHoreaPorutiu/application/local_fabric_wallet_solidary_chain
 gateway connect
 2020-06-28T01:13:00.945Z - error: [Channel.js]: Channel:allchannel received discovery error:access denied
 2020-06-28T01:13:00.946Z - error: [Channel.js]: Error: Channel:allchannel Discovery error:access denied

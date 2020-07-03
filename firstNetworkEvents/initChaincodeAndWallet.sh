@@ -13,7 +13,7 @@ ABSOLUTE_PATH="/opt/gopath/src/github.com/chaincode/chaincode-solidary-network-c
 ORDERER_CA="/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
 
 # change to project path
-cd /home/mario/Development/@Solidary.Network/solidarynetwork-development-events/firstNetworkEvents
+cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents
 # copy chaincode to cli
 docker cp contract/${CHAINCODE} cli:/opt/gopath/${CHAINCODE_DEPLOYMENT_PATH}/${CHAINCODE}
 # install to peer0.org1
@@ -37,7 +37,7 @@ rm wallet/user1/*
 node registerUser.js
 
 # Start node SDK Script
-cd /home/mario/Development/@Solidary.Network/solidarynetwork-development-events/firstNetworkEvents/application/
+cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents/application/
 # code contractEventsLocal.js
 node contractEventsLocal.js
 
