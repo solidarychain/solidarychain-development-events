@@ -15,13 +15,13 @@ press_any_key() {
 PWD=$(pwd)
 # CHANNEL="channelall"
 CHAINCODE_NAME="sncc"
-CHAINCODE_CONVECTOR="solidary-network-chaincode"
+CHAINCODE_CONVECTOR="solidary-chain-chaincode"
 CHAINCODE="${CHAINCODE_NAME}@1.0.cds"
 CHAINCODE_LANG="node"
-CHAINCODE_PATH="/home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents/contract/${CHAINCODE}"
+CHAINCODE_PATH="/home/mario/Development/@SolidaryChain/solidarychain-development-events/firstNetworkEvents/contract/${CHAINCODE}"
 VERSION="1.0"
 CHAINCODE_DEPLOYMENT_PATH="/src/github.com/hyperledger/fabric/peer"
-ABSOLUTE_PATH="/opt/gopath/src/github.com/chaincode/chaincode-solidary-network-chaincode"
+ABSOLUTE_PATH="/opt/gopath/src/github.com/chaincode/chaincode-solidary-chain-chaincode"
 # hurley
 DOMAIN="hurley.lab"
 ORDERER="orderer.${DOMAIN}"

@@ -1,6 +1,6 @@
 {
   "connectionFile": "local_fabric_connection_hurley.json",
-  "chaincodeName" : "solidary-network-chaincode",
+  "chaincodeName" : "solidary-chain-chaincode",
   "walletPath":"./local_fabric_wallet_solidary_chain_hurley",
   "channel" : "ch1",
   "peerIdentity": "admin",

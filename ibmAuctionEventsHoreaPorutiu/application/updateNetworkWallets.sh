@@ -9,7 +9,7 @@
 
 rm local_fabric_wallet_solidary_chain/admin/*
 # rm local_fabric_wallet_solidary_chain/user1/*
-cp ../../../solidarynetwork-development-monorepo/network/generated/wallets/.hfc-org1/* local_fabric_wallet_solidary_chain/admin/
+cp ../../../solidarychain-development-monorepo/network/generated/wallets/.hfc-org1/* local_fabric_wallet_solidary_chain/admin/
 
 rm local_fabric_wallet_solidary_chain_hurley/admin/*
 rm local_fabric_wallet_solidary_chain_hurley/user1/*

@@ -1,6 +1,6 @@
 {
   "connectionProfileFile": "connectionProfileNetwork.json",
-  "chaincodeName" : "solidary-network-chaincode",
+  "chaincodeName" : "solidary-chain-chaincode",
   "walletPath":"./walletNetwork",
   "channel" : "channelall",
   "peerIdentity": "admin",

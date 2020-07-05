@@ -8,7 +8,7 @@
         "verify": false
       },
       "tlsCACerts": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
+        "path": "/home/mario/Development/@SolidaryChain/solidarychain-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem"
       }
     }
   },
@@ -59,7 +59,7 @@
         "grpc-max-send-message-length": -1
       },
       "tlsCACerts": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+        "path": "/home/mario/Development/@SolidaryChain/solidarychain-development-monorepo/network/crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
       }
     }
   },
@@ -80,10 +80,10 @@
         "peer0.org1.example.com"
       ],
       "adminPrivateKey": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/96af36cbe8c2ac499a47caac626b1dff0ae69ce89e19d4ddc64ecf7edb4c15f9_sk"
+        "path": "/home/mario/Development/@SolidaryChain/solidarychain-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/96af36cbe8c2ac499a47caac626b1dff0ae69ce89e19d4ddc64ecf7edb4c15f9_sk"
       },
       "signedCert": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
+        "path": "/home/mario/Development/@SolidaryChain/solidarychain-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem"
       }
     }
   },
@@ -95,7 +95,7 @@
         "ssl-target-name-override": "peer0.org1.example.com"
       },
       "tlsCACerts": {
-        "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
+        "path": "/home/mario/Development/@SolidaryChain/solidarychain-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/msp/tlscacerts/tlsca.org1.example.com-cert.pem"
       }
     }
   }

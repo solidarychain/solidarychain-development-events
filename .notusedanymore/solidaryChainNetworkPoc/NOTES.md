@@ -11,7 +11,7 @@ based on ~/Development/HyperLedger/ibmAuctionEvents-HoreaPorutiu/
 ## Start bring Netowork crypto Materials
 
 ```shell
-$ cd ~/Development/@Solidary.Network/solidarynetwork-development-monorepo
+$ cd ~/Development/@SolidaryChain/solidarychain-development-monorepo
 $ ./bringProductionNetworkFiles.sh 
 ```
 
@@ -19,12 +19,12 @@ change `adminPrivateKey`
 
 ```json
 "adminPrivateKey": {
-  "path": "/home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/96dfa689b5e51c7759eeb0f3a985a0c2df2706bac41bd5703d9cdba10fb59707_sk"
+  "path": "/home/mario/Development/@SolidaryChain/solidarychain-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/96dfa689b5e51c7759eeb0f3a985a0c2df2706bac41bd5703d9cdba10fb59707_sk"
 },
 ```
 
 ```shell
-$ ls /home/mario/Development/@Solidary.Network/solidarynetwork-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/
+$ ls /home/mario/Development/@SolidaryChain/solidarychain-development-monorepo/network/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/
 a137d5a090fbfb9efb14b928da545a7133306655ba116ad865bac7cb4c3be587_sk
 ```
 
@@ -32,7 +32,7 @@ bring wallet from main project, only because we need admin folder
 
 ```shell
 $ rm walletNetwork/admin/*
-$ cp ../../solidarynetwork-development-monorepo/network/generated/wallets/.hfc-org1/* walletNetwork/admin/
+$ cp ../../solidarychain-development-monorepo/network/generated/wallets/.hfc-org1/* walletNetwork/admin/
 
 $ rm walletHurley/admin/*
 $ cp /home/mario/hyperledger-fabric-network/.hfc-org1/* walletHurley/admin/
@@ -50,8 +50,8 @@ channelEventHub
 __proto__:Map {constructor: , get: , set: , …}
 length:2
 0:{"{"chaincodes":[{"name":"mycc"}]}" => Object} {key: "{"chaincodes":[{"name":"mycc"}]}", value: Object}
-1:{"{"chaincodes":[{"name":"solidary-network-chaincode"}]}" => Object} {key: "{"chaincodes":[{"name":"solidary-network-chaincode…", value: Object}
-key:"{"chaincodes":[{"name":"solidary-network-chaincode"}]}"
+1:{"{"chaincodes":[{"name":"solidary-chain-chaincode"}]}" => Object} {key: "{"chaincodes":[{"name":"solidary-chain-chaincode…", value: Object}
+key:"{"chaincodes":[{"name":"solidary-chain-chaincode"}]}"
 value:Object {
 
 ## Connect to Hurley Network to debug Chaincode

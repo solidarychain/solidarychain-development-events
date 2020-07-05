@@ -7,7 +7,7 @@ const fs = require('fs');
 
 // change CHAINCODE_NAME to work with diferent chaincodes 
 // const CHAINCODE_NAME = 'auction';
-const CHAINCODE_NAME = 'solidary-network-chaincode';
+const CHAINCODE_NAME = 'solidary-chain-chaincode';
 // from ibm network, dont change it
 const CHANNEL = 'mychannel';
 
@@ -69,7 +69,7 @@ async function contractEvents() {
       //where we output the TradeEvent
       console.log('************************ Start Trade Event *******************************************************');
       console.log(`Block Number: ${blockNumber} Transaction ID: ${transactionId} Status: ${status}`);
-      if (CHAINCODE_NAME === 'solidary-network-chaincode') {
+      if (CHAINCODE_NAME === 'solidary-chain-chaincode') {
         console.log(JSON.stringify(event, undefined, 2));
       } else {
         console.log(`type: ${event.type}`);
@@ -83,7 +83,7 @@ async function contractEvents() {
       }
     });
 
-    if (CHAINCODE_NAME === 'solidary-network-chaincode') {
+    if (CHAINCODE_NAME === 'solidary-chain-chaincode') {
       // const addParticipantResponseGov = await contract.submitTransaction('participant_createWithParameters', 'c8ca045c-9d1b-407f-b9ae-31711758f2d0', 'gov', 'Big Government');
       // const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);
       for (let i = 0; i < 280; i++) {

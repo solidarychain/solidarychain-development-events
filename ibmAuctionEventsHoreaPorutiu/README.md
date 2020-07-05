@@ -44,7 +44,7 @@ work with 5 networks
 │   ├── package-lock.json
 │   ├── transactionEvents.js
 │   ├── transactionEventsLocal.js
-│   └── updateWalletSolidaryNetwork.sh
+│   └── updateNetworkWallets.sh
 ├── contract
 │   ├── auction@0.0.1.cds
 │   ├── index.js

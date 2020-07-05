@@ -5,15 +5,15 @@
 PWD=$(pwd)
 CHANNEL="channelall"
 CHAINCODE_NAME="sncc"
-CHAINCODE_CONVECTOR="ssolidary-network-chaincode"
+CHAINCODE_CONVECTOR="ssolidary-chain-chaincode"
 CHAINCODE="${CHAINCODE_NAME}@1.0.cds"
 VERSION="1.0"
 CHAINCODE_DEPLOYMENT_PATH="/src/github.com/hyperledger/fabric/peer"
-ABSOLUTE_PATH="/opt/gopath/src/github.com/chaincode/chaincode-solidary-network-chaincode"
+ABSOLUTE_PATH="/opt/gopath/src/github.com/chaincode/chaincode-solidary-chain-chaincode"
 ORDERER_CA="/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
 
 # change to project path
-cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents
+cd /home/mario/Development/@SolidaryChain/solidarychain-development-events/firstNetworkEvents
 # copy chaincode to cli
 docker cp contract/${CHAINCODE} cli:/opt/gopath/${CHAINCODE_DEPLOYMENT_PATH}/${CHAINCODE}
 # install to peer0.org1
@@ -37,7 +37,7 @@ rm wallet/user1/*
 node registerUser.js
 
 # Start node SDK Script
-cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents/application/
+cd /home/mario/Development/@SolidaryChain/solidarychain-development-events/firstNetworkEvents/application/
 # code contractEventsLocal.js
 node contractEventsLocal.js
 

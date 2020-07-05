@@ -74,11 +74,11 @@ couchdb2                              4369/tcp, 9100/tcp, 0.0.0.0:7984->5984/tcp
 ```shell
 $ CHANNEL="channelall"
 $ CHAINCODE_NAME="sncc"
-$ CHAINCODE_CONVECTOR="solidary-network-chaincode"
+$ CHAINCODE_CONVECTOR="solidary-chain-chaincode"
 $ CHAINCODE="${CHAINCODE_NAME}@1.0.cds"
 $ VERSION="1.0"
 $ CHAINCODE_DEPLOYMENT_PATH="/src/github.com/hyperledger/fabric/peer"
-$ ABSOLUTE_PATH="/opt/gopath/src/github.com/chaincode/chaincode-solidary-network-chaincode"
+$ ABSOLUTE_PATH="/opt/gopath/src/github.com/chaincode/chaincode-solidary-chain-chaincode"
 $ ORDERER_CA="/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
 # PEER0_ORG1_CA="/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt"
 
@@ -91,7 +91,7 @@ eabcc60e4b14        hyperledger/fabric-peer:latest   peer1.org1.example.com   0.
 7078c75a5afe        hyperledger/fabric-peer:latest   peer0.org2.example.com   0.0.0.0:9051->9051/tcp
 
 # change to project path
-$ cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents
+$ cd /home/mario/Development/@SolidaryChain/solidarychain-development-events/firstNetworkEvents
 # copy chaincode to cli
 $ docker cp contract/${CHAINCODE} cli:/opt/gopath/${CHAINCODE_DEPLOYMENT_PATH}/${CHAINCODE}
 # install to peer0.org1
@@ -106,10 +106,10 @@ $ docker exec cli peer chaincode instantiate -o orderer.example.com:7050 -l node
 2020-06-28 00:15:08.288 UTC [chaincodeCmd] checkChaincodeCmdParams -> INFO 002 Using default vscc
 # check instantiated: on default peer peer0.org1
 $ docker exec cli peer chaincode list -C ${CHANNEL} --instantiated | grep ${CHAINCODE_CONVECTOR}
-Name: solidary-network-chaincode, Version: 1.0, Path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarynetwork-development-monorepo/chaincode-solidary-network-chaincode, Escc: escc, Vscc: vscc
+Name: solidary-chain-chaincode, Version: 1.0, Path: /media/mario/Storage/Documents/Development/@SolidaryChain/solidarychain-development-monorepo/chaincode-solidary-chain-chaincode, Escc: escc, Vscc: vscc
 # check instantiated: peer1.org1
 $ docker exec -e "CORE_PEER_ADDRESS=peer1.org1.example.com:8051" cli peer chaincode list -C ${CHANNEL} --instantiated | grep ${CHAINCODE_CONVECTOR}
-Name: solidary-network-chaincode, Version: 1.0, Path: /media/mario/Storage/Documents/Development/@Solidary.Network/solidarynetwork-development-monorepo/chaincode-solidary-network-chaincode, Escc: escc, Vscc: vscc
+Name: solidary-chain-chaincode, Version: 1.0, Path: /media/mario/Storage/Documents/Development/@SolidaryChain/solidarychain-development-monorepo/chaincode-solidary-chain-chaincode, Escc: escc, Vscc: vscc
 ```
 
 ## Create Wallet
@@ -136,7 +136,7 @@ wallet path location: `/home/mario/Development/HyperLedger/fabric-samples/fabcar
 
 ```shell
 # change to project path
-$ cd /home/mario/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents/application/
+$ cd /home/mario/Development/@SolidaryChain/solidarychain-development-events/firstNetworkEvents/application/
 
 # edit node contractEventsLocal.js and uncomment `// const res = await contract.submitTransaction('participant_createWithParameters', `c8ca045c-9d1b-407f-b9ae-31711758f2d0`, `gov`, `Big Government`);` line to prevent bellow error, after firts time run, we comment it
 $ code contractEventsLocal.js
@@ -162,7 +162,7 @@ Block Number: 26 Transaction ID: dea2a83fc6590dd0787175ea6c645ae8c314e9f8d51368c
 ```shell
 SOURCE_IP=192.168.1.64
 # copy files to local filesystem
-$ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/@Solidary.Network/solidarychain-development-events/firstNetworkEvents /tmp
+$ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/@SolidaryChain/solidarychain-development-events/firstNetworkEvents /tmp
 $ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/HyperLedger/fabric-samples/fabcar/javascript/wallet/ /tmp/firstNetworkEvents
 $ rsync -r -d ${SOURCE_IP}:/media/mario/Storage/Documents/Development/HyperLedger/fabric-samples/first-network/crypto-config /tmp/firstNetworkEvents
 

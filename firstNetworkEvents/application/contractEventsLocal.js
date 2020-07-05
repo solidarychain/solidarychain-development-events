@@ -7,7 +7,7 @@ const fs = require('fs');
 
 // change CHAINCODE_NAME to work with diferent chaincodes 
 // const CHAINCODE_NAME = 'auction';
-const CHAINCODE_NAME = 'solidary-network-chaincode';
+const CHAINCODE_NAME = 'solidary-chain-chaincode';
 // from ibm network, dont change it
 const CHANNEL = 'channelall';
 

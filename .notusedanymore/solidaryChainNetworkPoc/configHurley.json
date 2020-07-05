@@ -1,6 +1,6 @@
 {
   "connectionProfileFile": "connectionProfileHurley.json",
-  "chaincodeName" : "solidary-network-chaincode",
+  "chaincodeName" : "solidary-chain-chaincode",
   "walletPath":"./walletHurley",
   "channel" : "ch1",
   "peerIdentity": "admin",

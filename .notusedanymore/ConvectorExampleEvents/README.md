@@ -34,7 +34,7 @@ Registering user1 for org2
 
 # try build
 $ npm run build
-Error: Cannot find module '/media/mario/Storage/Documents/Development/@Solidary.Network/@Samples/ConvectorExampleEvents/org1.official.config.json'
+Error: Cannot find module '/media/mario/Storage/Documents/Development/@SolidaryChain/@Samples/ConvectorExampleEvents/org1.official.config.json'
 $ cp org1.financial.config.json org1.official.config.json
 $ cp org2.financial.config.json org2.official.config.json
 $ npm run build

@@ -1,6 +1,6 @@
 {
   "channel_name": "ch1",
-  "smart_contract_name": "solidary-network-chaincode",
+  "smart_contract_name": "solidary-chain-chaincode",
   "connection_file": "mychannel_auction_profile.json",
   "appAdmin": "app-admin",
   "appAdminSecret": "app-adminpw",
